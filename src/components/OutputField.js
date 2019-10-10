@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 
-const OutputField = ({ loading, data, link }) => {
+const OutputField = ({ loading, data }) => {
   if (loading) {
     return (
       <Spinner animation='border' role='status'>

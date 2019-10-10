@@ -38,11 +38,7 @@ class App extends Component {
         <div className='container'>
           <Header />
           <LinkInput sendLink={this.sendLink} />
-          <OutputField
-            theLink={this.state.link}
-            loading={this.state.loading}
-            data={this.state.data}
-          />
+          <OutputField loading={this.state.loading} data={this.state.data} />
         </div>
       </Fragment>
     );
