@@ -36,7 +36,9 @@ class LinkInput extends Component {
               value={this.state.text}
             />
             <InputGroup.Prepend>
-              <Button type='submit'>Convert!</Button>
+              <Button variant='success' type='submit'>
+                Convert!
+              </Button>
             </InputGroup.Prepend>
           </InputGroup>
         </Form.Group>
