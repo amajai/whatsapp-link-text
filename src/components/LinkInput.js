@@ -17,31 +17,29 @@ class LinkInput extends Component {
   };
   render() {
     return (
-      <Form
-        as={Row}
-        onSubmit={this.onSubmit}
-        className=' justify-content-center'
-      >
-        <Form.Group as={Col} md='8' controlId='validLink'>
-          <InputGroup>
-            <InputGroup.Prepend>
-              <InputGroup.Text id='inputGroupPrepend'>Link:</InputGroup.Text>
-            </InputGroup.Prepend>
-            <Form.Control
-              onChange={this.onChange}
-              type='url'
-              placeholder='Add link here...'
-              aria-describedby='inputGroupPrepend'
-              required
-              value={this.state.text}
-            />
-            <InputGroup.Prepend>
-              <Button variant='success' type='submit'>
-                Convert!
-              </Button>
-            </InputGroup.Prepend>
-          </InputGroup>
-        </Form.Group>
+      <Form onSubmit={this.onSubmit}>
+        <Row className='justify-content-center'>
+          <Form.Group as={Col} md='8' controlId='validLink'>
+            <InputGroup>
+              <InputGroup.Prepend>
+                <InputGroup.Text id='inputGroupPrepend'>Link:</InputGroup.Text>
+              </InputGroup.Prepend>
+              <Form.Control
+                onChange={this.onChange}
+                type='url'
+                placeholder='Add link here...'
+                aria-describedby='inputGroupPrepend'
+                required
+                value={this.state.text}
+              />
+              <InputGroup.Prepend>
+                <Button variant='success' type='submit'>
+                  Convert!
+                </Button>
+              </InputGroup.Prepend>
+            </InputGroup>
+          </Form.Group>
+        </Row>
       </Form>
     );
   }

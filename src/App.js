@@ -8,7 +8,7 @@ import axios from 'axios';
 class App extends Component {
   state = {
     loading: false,
-    link: true,
+    link: '',
     data: ''
   };
 
@@ -22,14 +22,12 @@ class App extends Component {
       data: { link: link }
     })
       .then(function(response) {
-        console.log('Success!');
         return response.data;
       })
       .catch(function(error) {
         console.log(error);
       });
-    let text = `${data.heading}\n\n${data.summary}...`;
-    console.log(text);
+    let text = `*${data.heading}*\n\n${data.summary}...\n\n*Read more:*\n${this.state.link}`;
     this.setState({ data: text, loading: false });
   };
   render() {
