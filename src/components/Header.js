@@ -7,7 +7,7 @@ const Header = () => {
       <div className='text-center mt-4'>
         <img src={wlttLogo} alt='app-logo' width='150px' />
         <h2>Link-to-ChatText</h2>
-        <p>
+        <p className='mx-4'>
           An app that converts article link into sharable chat text with article
           summary and link
         </p>
