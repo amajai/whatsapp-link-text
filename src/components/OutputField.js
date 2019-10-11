@@ -20,7 +20,7 @@ const OutputField = ({ loading, data }) => {
               name='outputfield'
               id='outputfield'
               cols='60'
-              rows='15'
+              rows='10'
               value={data}
               readOnly
               style={{ resize: 'none', fontSize: '13px' }}
