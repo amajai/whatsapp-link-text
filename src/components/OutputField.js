@@ -5,7 +5,7 @@ import { Row } from 'react-bootstrap';
 const OutputField = ({ loading, data }) => {
   if (loading) {
     return (
-      <div class='d-flex justify-content-center mt-5'>
+      <div className='d-flex justify-content-center mt-5'>
         <Spinner animation='border' role='status' variant='success'>
           <span className='sr-only'>Loading...</span>
         </Spinner>
