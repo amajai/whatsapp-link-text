@@ -10,7 +10,7 @@ class App extends Component {
   state = {
     loading: false,
     link: '',
-    data: 'Eureka!!',
+    data: '',
     copied: false
   };
 
