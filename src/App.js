@@ -17,7 +17,7 @@ class App extends Component {
     this.setState({ loading: true });
     const data = await axios({
       method: 'POST',
-      url: '/send_link',
+      baseURL: '/send_link',
       headers: { 'content-type': 'application/json' },
       data: { link: link }
     })
