@@ -17,7 +17,8 @@ class App extends Component {
     this.setState({ loading: true });
     const data = await axios({
       method: 'POST',
-      baseURL: '/send_link',
+      url: '/send_link',
+      baseURL: 'https://whatsapp-link-text-server.herokuapp.com',
       headers: { 'content-type': 'application/json' },
       data: { link: link }
     })
