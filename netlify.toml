@@ -1,5 +1,1 @@
-[[redirects]]
-  from = "https://tender-hamilton-9e1537.netlify.com/*"
-  to = "https://whatsapp-link-text-server.herokuapp.com/:splat"
-  status = 200
-  force = true
+/api/*  https://whatsapp-link-text-server.herokuapp.com  200
