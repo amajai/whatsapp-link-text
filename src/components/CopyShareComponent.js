@@ -5,7 +5,7 @@ const CopyShareComponent = ({ showbtns, copyText, text, copied }) => {
   return (
     <Fragment>
       {showbtns && (
-        <Row className='mx-5 p-2 justify-content-center'>
+        <Row className='p-2 justify-content-center'>
           <Button
             variant='secondary'
             type='submit'
@@ -13,7 +13,7 @@ const CopyShareComponent = ({ showbtns, copyText, text, copied }) => {
             disabled={copied}
             onClick={copyText}
           >
-            {!copied ? 'Copy Text' : 'Copied!'}
+            {!copied ? 'Copy' : 'Copied!'}
           </Button>
 
           <a
