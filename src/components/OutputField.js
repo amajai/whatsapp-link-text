@@ -15,7 +15,7 @@ const OutputField = ({ loading, data }) => {
     return (
       <Fragment>
         {data && (
-          <Row className='justify-content-center'>
+          <Row className='justify-content-center mx-3'>
             <textarea
               name='outputfield'
               id='outputfield'
