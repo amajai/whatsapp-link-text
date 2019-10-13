@@ -11,7 +11,8 @@ class App extends Component {
     loading: false,
     link: '',
     data: '',
-    copied: false
+    copied: false,
+    shared: false
   };
 
   copyText = () => {
@@ -19,6 +20,11 @@ class App extends Component {
     let copyText = document.querySelector('#outputfield');
     copyText.select();
     document.execCommand('copy');
+    setTimeout(() => this.setState({ copied: false }), 3000);
+  };
+
+  shareText = () => {
+    this.setState({ shared: true });
     setTimeout(() => this.setState({ copied: false }), 3000);
   };
 
@@ -51,9 +57,11 @@ class App extends Component {
           <OutputField loading={this.state.loading} data={this.state.data} />
           <CopyShareComponent
             showbtns={this.state.data === '' ? false : true}
-            copyText={this.copyText}
             text={this.state.data}
+            copyText={this.copyText}
             copied={this.state.copied}
+            shared={this.state.shared}
+            shareText={this.shareText}
           />
         </div>
       </Fragment>

@@ -1,7 +1,14 @@
 import React, { Fragment } from 'react';
 import { Row, Button } from 'react-bootstrap';
 
-const CopyShareComponent = ({ showbtns, copyText, text, copied }) => {
+const CopyShareComponent = ({
+  showbtns,
+  copyText,
+  text,
+  copied,
+  shared,
+  shareText
+}) => {
   return (
     <Fragment>
       {showbtns && (
@@ -22,8 +29,15 @@ const CopyShareComponent = ({ showbtns, copyText, text, copied }) => {
             )}`}
             data-action='share/whatsapp/share'
           >
-            <Button className='ml-2' variant='success' type='submit' size='sm'>
-              Share to Whatsapp!
+            <Button
+              className='ml-2'
+              variant='success'
+              type='submit'
+              size='sm'
+              disabled={shared}
+              onClick={shareText}
+            >
+              {!shared ? 'Share to Whatsapp!' : 'Sharing...'}
             </Button>
           </a>
         </Row>
