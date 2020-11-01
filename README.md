@@ -3,7 +3,6 @@ A web app that takes an article link and parses the title and the first paragrap
 
 The app consist of the front-end where it collects a user link and [back-end](https://github.com/amajai/whatsapp-link-text-server) where a python script parses the title, paragraph and link of the article page then joins them into a shareable text format.
 
-![](/src/assets/srnshot.png)
 
 <img src='https://raw.githubusercontent.com/amajai/whatsapp-link-text/master/src/assets/srnshot.png'>
 
